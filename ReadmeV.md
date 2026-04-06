@@ -1,15 +1,15 @@
-# Security Alarm System with Light Detector
+# Security Alarm System with Sound Detector
 
 ## Overview
 
 This project is a simple **security alarm system** built with **Arduino**.  
-It uses a **light detector (LDR sensor module)** to detect when light is present.
+It uses a **sound detector (microphone module)** to detect sudden noise.
 
-When the sensor detects light:
+When the sensor detects sound:
 - the **buzzer starts beeping**
 - the **LED turns on**
 
-This simulates a basic alarm system that reacts to changes in light, and it can be extended in the future with more sensors and features.
+This simulates a basic alarm system that reacts to sound disturbances, such as claps or knocks.
 
 ---
 ## Demo Video
@@ -34,16 +34,16 @@ Click the image below to watch the demo on YouTube.
 
 ## How It Works
 
-The system constantly reads the value from the light sensor.
+The system constantly reads values from the sound sensor.
 
-- If the detected light level passes the chosen threshold:
+- If the detected sound level exceeds a chosen threshold:
   - the **LED lights up**
   - the **buzzer is activated**
-- If there is no significant light detected:
+- If the environment is quiet:
   - the **LED stays off**
   - the **buzzer stays off**
 
-This can be used as a very simple prototype for a light-based alarm system.
+Note: The sound sensor detects **sudden changes (spikes)** in sound rather than continuous volume.
 
 ---
 
@@ -53,7 +53,7 @@ The schematic / circuit plan was created using Circuit Canva
 
 The circuit includes:
 - Arduino board
-- light sensor / photoresistor module
+- sound sensor / microphone module
 - LED
 - buzzer
 - resistors
@@ -65,7 +65,7 @@ The circuit includes:
 ## Pre-requisites / Components
 
 - [ ] Arduino board: `Arduino Uno R3`
-- [ ] Light sensor / LDR module: `hw-072`
+- [ ] Sound sensor / microphone module
 - [ ] LED: `LTL-307G Led`
 - [ ] Buzzer: `Arduino buzzer`
 - [ ] Resistor(s): `0.25w 10K Omega resitors * 2`
@@ -79,20 +79,20 @@ The circuit includes:
 ### What has already been done
 - Built the physical circuit on a breadboard
 - Connected the Arduino to:
-  - a light detector
+  - a sound sensor
   - an LED
   - a buzzer
 - Tested the behavior of the system
 - Confirmed that:
-  - when light is detected, the LED turns on
-  - when light is detected, the buzzer starts beeping
+  - when sound is detected, the LED turns on
+  - when sound is detected, the buzzer starts beeping
 - Created a schematic diagram for the circuit
 
 ### What we plan to do next
 - Improve the design and cable management
 - Fine-tune the light sensitivity
 - Add more sensors and alarm conditions
-- Extend the project with a **sound detector**
+- Extend the project with additional sensors (light, proximity, etc.)
 - Potentially create a more advanced multi-sensor security alarm system
 
 ---
