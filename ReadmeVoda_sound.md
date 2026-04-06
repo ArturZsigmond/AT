@@ -28,7 +28,7 @@ Click the image below to watch the demo on YouTube.
 ![Real circuit setup](./images/real-circuit.jpeg)
 
 ### Schematic Plan
-![Schematic plan](./images/schems.jpeg)
+![Schematic plan](./images/team_scheme.png)
 
 ---
 
